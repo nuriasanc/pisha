@@ -1,54 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>El Señor Pene</title>
-<style>
-body{
-    font-family: Arial, sans-serif;
-    text-align:center;
-    background:#ffe9f0;
-}
-#personaje{
-    font-size:150px;
-    transition:transform .3s;
-}
-.bailar{
-    animation: baile .4s infinite alternate;
-}
-@keyframes baile{
-    from{transform:rotate(-10deg);}
-    to{transform:rotate(10deg);}
-}
-button{
-    padding:12px 20px;
-    font-size:18px;
-}
-</style>
+    <meta charset="utf-8">
+    <title>El Collar de Tus Sueños</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-<h1>🍆 El Señor Pene 🍆</h1>
-
-<div id="personaje">🍆</div>
-
-<p id="frase">¡Hola!</p>
-
-<button onclick="bailar()">¡Hazme bailar!</button>
-
-<script>
-const frases=[
-"¡Estoy de buen humor!",
-"¡Qué día tan divertido!",
-"¡Hora del baile!",
-"¡No puedo parar de moverme!"
-];
-
-function bailar(){
-    personaje.classList.toggle("bailar");
-    frase.textContent=frases[Math.floor(Math.random()*frases.length)];
-}
-</script>
-
+    <div id="s1" class="screen active">
+        <h1>El Collar de Tus Sueños</h1>
+        <p>Empiezas con <b><span id='len'>20</span> cm</b>. Cada cualidad resta 1 cm.</p>
+        <div class="wrap">
+            <div id="collar"></div>
+            <div class="list" id="good"></div>
+        </div><button id="to2">Siguiente</button>
+    </div>
+    <div id="s2" class="screen">
+        <h1>Ahora el grosor</h1>
+        <p>Empiezas con <b><span id='wid'>0</span> cm</b>. Cada defecto suma 1 cm.</p>
+        <div class="wrap">
+            <div id="collar2"></div>
+            <div class="list" id="bad"></div>
+        </div><button id="to3">Calcular</button>
+    </div>
+    <div id="s3" class="screen">
+        <h1>Calculando...</h1>
+        <p id="calc"></p>
+        <div id="result" style="display:none">
+            <h2>Tu hombre ideal es...</h2>
+            <h3>¡Siempre el mismo!</h3>
+            <div class="card">
+                <h4>Nombre del personaje</h4><textarea placeholder="Escribe aquí la descripción..."></textarea>
+            </div><button onclick="location.reload()">Volver a jugar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

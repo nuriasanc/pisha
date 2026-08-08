@@ -78,15 +78,15 @@ badTraits.forEach(trait => {
 
 document.getElementById("to2").addEventListener("click", () => {
 
-    document.getElementById("s1").classList.remove("active");
-    document.getElementById("s2").classList.add("active");
+      showScreen("s2");
+
 
 });
 
 document.getElementById("to3").addEventListener("click", () => {
 
-    document.getElementById("s2").classList.remove("active");
-    document.getElementById("s3").classList.add("active");
+      showScreen("s3");
+
 
     const calc = document.getElementById("calc");
 
@@ -121,3 +121,13 @@ document.getElementById("to3").addEventListener("click", () => {
     }, 900);
 
 });
+
+function showScreen(id){
+
+    document.querySelectorAll(".screen").forEach(screen=>{
+        screen.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+
+}

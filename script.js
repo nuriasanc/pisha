@@ -78,8 +78,18 @@ badTraits.forEach(trait => {
 
 document.getElementById("to2").addEventListener("click", () => {
 
-      showScreen("s2");
+    // Copiar la altura obtenida en la fase 1
+    const collar1 = document.getElementById("collar");
+    const collar2 = document.getElementById("collar2");
 
+    collar2.style.height = collar1.offsetHeight + "px";
+
+    // Empezar con grosor 0
+    collar2.style.width = "0px";
+
+    document.getElementById("wid").textContent = "0";
+
+    showScreen("s2");
 
 });
 

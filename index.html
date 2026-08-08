@@ -2,40 +2,160 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>El Collar de Tus Sueños</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div id="s1" class="screen active">
-        <h1>El Collar de Tus Sueños</h1>
-        <p>Empiezas con <b><span id='len'>20</span> cm</b>. Cada cualidad resta 1 cm.</p>
-        <div class="wrap">
-            <div id="collar"></div>
-            <div class="list" id="good"></div>
-        </div><button id="to2">Siguiente</button>
-    </div>
-    <div id="s2" class="screen">
-        <h1>Ahora el grosor</h1>
-        <p>Empiezas con <b><span id='wid'>0</span> cm</b>. Cada defecto suma 1 cm.</p>
-        <div class="wrap">
-            <div id="collar2"></div>
-            <div class="list" id="bad"></div>
-        </div><button id="to3">Calcular</button>
-    </div>
-    <div id="s3" class="screen">
-        <h1>Calculando...</h1>
-        <p id="calc"></p>
-        <div id="result" style="display:none">
-            <h2>Tu hombre ideal es...</h2>
-            <h3>¡Siempre el mismo!</h3>
-            <div class="card">
-                <h4>Nombre del personaje</h4><textarea placeholder="Escribe aquí la descripción..."></textarea>
-            </div><button onclick="location.reload()">Volver a jugar</button>
+
+    <section id="intro" class="screen active">
+
+    <div class="hero">
+
+        <div class="logo">
+            💎
         </div>
+
+        <h1>El Collar de Tus Sueños</h1>
+
+        <p class="subtitle">
+            Descubre cómo sería tu hombre ideal mediante nuestro exclusivo
+            algoritmo de compatibilidad.
+        </p>
+
+        <div class="info">
+
+            <div class="infoCard">
+                ✅ Elige sus mejores cualidades
+            </div>
+
+            <div class="infoCard">
+                📏 Ajustaremos el collar
+            </div>
+
+            <div class="infoCard">
+                ❤️ Descubre el resultado
+            </div>
+
+        </div>
+
+        <button id="startBtn">
+            Empezar
+        </button>
+
     </div>
+
+</section>
+    <!-- ===================== -->
+    <!-- PANTALLA 1 -->
+    <!-- ===================== -->
+
+    <section id="s1" class="screen">
+
+        <h1>💎 El Collar de Tus Sueños</h1>
+
+        <p class="subtitle">
+            Empiezas con <strong><span id="len">20</span> cm</strong>.
+            <br>
+            Cada cualidad que elijas resta 1 cm de longitud.
+        </p>
+
+        <div class="wrap">
+
+            <div id="collarArea">
+
+                <div id="collar"></div>
+
+            </div>
+
+            <div class="list" id="good"></div>
+
+        </div>
+
+        <button id="to2">
+            Continuar →
+        </button>
+
+    </section>
+
+    <!-- ===================== -->
+    <!-- PANTALLA 2 -->
+    <!-- ===================== -->
+
+    <section id="s2" class="screen">
+
+        <h1>📏 Ahora el grosor</h1>
+
+        <p class="subtitle">
+            Empiezas con <strong><span id="wid">0</span> cm</strong>.
+            <br>
+            Cada defecto aceptado añade 1 cm de grosor.
+        </p>
+
+        <div class="wrap">
+
+            <div id="collarArea">
+
+                <div id="collar2"></div>
+
+            </div>
+
+            <div class="list" id="bad"></div>
+
+        </div>
+
+        <button id="to3">
+            Calcular resultado
+        </button>
+
+    </section>
+
+    <!-- ===================== -->
+    <!-- PANTALLA 3 -->
+    <!-- ===================== -->
+
+    <section id="s3" class="screen">
+
+        <h1>❤️ Calculando...</h1>
+
+        <p id="calc"></p>
+
+        <div id="result" style="display:none; width:100%;">
+
+            <div class="card">
+
+                <h2>✨ Tu hombre ideal es...</h2>
+
+                <br>
+
+                <h1 style="margin-bottom:20px;">
+                    NOMBRE AQUÍ
+                </h1>
+
+                <p>
+                    Aquí podrás escribir la descripción del personaje.
+                </p>
+
+                <textarea placeholder="Escribe aquí la descripción..."></textarea>
+
+            </div>
+
+            <button onclick="location.reload()">
+                🔄 Volver a jugar
+            </button>
+
+        </div>
+
+    </section>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

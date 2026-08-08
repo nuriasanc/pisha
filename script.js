@@ -131,3 +131,7 @@ function showScreen(id){
     document.getElementById(id).classList.add("active");
 
 }
+
+document.getElementById("startBtn").addEventListener("click", () => {
+    showScreen("s1");
+});

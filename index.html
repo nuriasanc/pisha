@@ -1,1 +1,54 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>El Señor Pene</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#ffe9f0;
+}
+#personaje{
+    font-size:150px;
+    transition:transform .3s;
+}
+.bailar{
+    animation: baile .4s infinite alternate;
+}
+@keyframes baile{
+    from{transform:rotate(-10deg);}
+    to{transform:rotate(10deg);}
+}
+button{
+    padding:12px 20px;
+    font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<h1>🍆 El Señor Pene 🍆</h1>
+
+<div id="personaje">🍆</div>
+
+<p id="frase">¡Hola!</p>
+
+<button onclick="bailar()">¡Hazme bailar!</button>
+
+<script>
+const frases=[
+"¡Estoy de buen humor!",
+"¡Qué día tan divertido!",
+"¡Hora del baile!",
+"¡No puedo parar de moverme!"
+];
+
+function bailar(){
+    personaje.classList.toggle("bailar");
+    frase.textContent=frases[Math.floor(Math.random()*frases.length)];
+}
+</script>
+
+</body>
+</html>

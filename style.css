@@ -78,7 +78,7 @@ p{
 #collar,
 #collar2{
 
-    background:linear-gradient(180deg,#6b3fd4,#3e1f8b);
+    background:linear-gradient(180deg,#ffbd43,#d47d1a);
 
     border-radius:50px;
 
@@ -373,4 +373,13 @@ textarea{
     transition:
         width .35s ease,
         height .35s ease;
+}
+
+.card img{
+    display:block;
+    width:100%;
+    max-width:320px;
+    height:auto;
+    margin:20px auto;
+    border-radius:18px;
 }
